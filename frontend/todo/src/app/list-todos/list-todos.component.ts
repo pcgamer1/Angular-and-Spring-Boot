@@ -27,13 +27,13 @@ export class ListTodosComponent implements OnInit {
   }
 
   refreshTodos() {
-    this.todoService.retrieveAllTodos('sarthak').subscribe((resp) => {
+    this.todoService.retrieveAllTodos('in28minutes').subscribe((resp) => {
       this.todos = resp;
     });
   }
 
   deleteTodo(id: number) {
-    this.todoService.deleteTodo('sarthak', id).subscribe((resp) => {
+    this.todoService.deleteTodo('in28minutes', id).subscribe((resp) => {
       this.message = 'Todo has been deleted';
       this.refreshTodos();
     });
