@@ -1,4 +1,4 @@
-package com.example.demo.jwt;
+package com.example.demo.user;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -17,6 +17,10 @@ public class User {
 	private String password;
 	private String role;
 	private boolean enabled;
+
+	public User() {
+
+	}
 
 	public Long getId() {
 		return id;

@@ -6,9 +6,7 @@ import { API_URL } from '../app.constants';
 export const TOKEN = 'token';
 export const AUTHENTICATED_USER = 'authenticatedUser';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable()
 export class BasicAuthenticationService {
   constructor(private http: HttpClient) {}
 
@@ -40,18 +38,6 @@ export class BasicAuthenticationService {
         return data;
       })
     );
-  }
-
-  getAuthenticatedToken() {
-    if (this.getAuthenticatedUser()) {
-      let token = sessionStorage.getItem(TOKEN);
-      return token;
-    }
-  }
-
-  getAuthenticatedUser() {
-    let user = sessionStorage.getItem(AUTHENTICATED_USER);
-    return user;
   }
 
   isUserLoggedIn() {

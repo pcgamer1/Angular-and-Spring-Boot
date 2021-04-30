@@ -1,0 +1,10 @@
+<div class="container">
+  <small class="alert alert-warning" *ngIf="created">{{successMessage}}</small>
+
+  <div>
+    Username : <input type="text" name="username" [(ngModel)]="user.username" />
+    Password : <input type="password" name="password" [(ngModel)]="user.password" />
+    
+    <button (click)=onSave() class="btn btn-success">Sign Up</button>
+  </div>
+</div>

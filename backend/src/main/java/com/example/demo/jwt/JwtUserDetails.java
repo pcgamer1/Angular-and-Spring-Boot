@@ -7,6 +7,8 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import com.example.demo.user.User;
+
 public class JwtUserDetails implements UserDetails {
 
 	private static final long serialVersionUID = 1L;

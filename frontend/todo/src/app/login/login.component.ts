@@ -7,6 +7,7 @@ import { HardcodedAuthenticationService } from '../service/hardcoded-authenticat
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
+  providers: [BasicAuthenticationService],
 })
 export class LoginComponent implements OnInit {
   username = 'sarthak';
